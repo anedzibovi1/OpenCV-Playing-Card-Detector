@@ -24,16 +24,16 @@ import cv2
 
 class VideoStream:
     """Camera object"""
-    def __init__(self, resolution=(640,480),framerate=30,PiOrUSB=1,src=0):
+    def __init__(self, resolution=(640,480),framerate=30,PiOrUSB=2,src=0):
 
         # Create a variable to indicate if it's a USB camera or PiCamera.
         # PiOrUSB = 1 will use PiCamera. PiOrUSB = 2 will use USB camera.
-        self.PiOrUSB = PiOrUSB
+        self.PiOrUSB = 2
 
         if self.PiOrUSB == 1: # PiCamera
             # Import packages from picamera library
-            from picamera.array import PiRGBArray
-            from picamera import PiCamera
+            '''from picamera.array import PiRGBArray
+            from picamera import PiCamera'''
 
             # Initialize the PiCamera and the camera image stream
             self.camera = PiCamera()
